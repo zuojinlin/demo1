@@ -1,15 +1,20 @@
 <template>
 	<div>
 		<div class="w-header_buttons">
-			<router-link to="/" class="w-header_button w-header_button_selected">精选</router-link>
-			<router-link to="/game/all" class="w-header_button">直播</router-link>
-			<router-link to="/category" class="w-header_button">分类</router-link>
+			<router-link to="/a" class="w-header_button " active-class="w-header_button_selected w-header_button_selected" >精选</router-link>
+			<router-link to="/game/all" active-class="w-header_button_selected w-header_button_selected" class="w-header_button" @focus="addc">直播</router-link>
+			<router-link to="/category" active-class="w-header_button_selected w-header_button_selected" class="w-header_button" @focus="addc">分类</router-link>
 		</div>
 	</div>
 </template>
 <script>
 	export default {
-		name: 'jingx'
+		name: 'jingx',
+		methods:{
+			addc:function(){
+				this.className = 'w-header_button_selected'
+			}
+		}
 	}
 </script>
 <style detail>
@@ -35,5 +40,18 @@
 	    position: relative;
 	    text-decoration: none;
 	    display: inline-block;
+	}
+	.w-header_button:after {
+	    content: ' ';
+	    display: block;
+	    position: absolute;
+	    bottom: 0;
+	    width: 1rem;
+	    height: .06rem;
+	    left: .6rem;
+	    border-radius: 6px;
+	}
+	.w-header_button_selected:after {
+   		background: #ff5253;
 	}
 </style>
