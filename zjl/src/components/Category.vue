@@ -6,7 +6,7 @@
       <ul class="p-category_list">
         <li class="p-category_item" v-for="item in list">
           <!-- <a href="" :style="{background: 'url(' + item.image + ')'}"> -->
-          <a href="">
+          <a :href="'/game/' + item.slug">
             <img class="p-category_thumb" :src="item.image">
             <div class="p-category_item_name">{{item.name}}</div>
             <!-- {{item.image}} -->

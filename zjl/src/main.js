@@ -7,6 +7,11 @@ import router from './router'
 import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'
 
+/*----------------------------------*/
+import { Popup } from 'mint-ui';
+
+Vue.component(Popup.name, Popup);
+
 import { Swipe, SwipeItem } from 'mint-ui';
 
 Vue.component(Swipe.name, Swipe);
@@ -19,6 +24,8 @@ import Jingx from './Jingx';
 
 Vue.component(Child.name, Child);
 Vue.component(Jingx.name, Jingx);
+
+/*------------------------------------------*/
 
 Vue.config.productionTip = false
 

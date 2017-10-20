@@ -9,7 +9,7 @@
         </mt-swipe-item>
       </mt-swipe>
     </div>
-    <div class="w-videos" v-for="iten in listt">
+    <div class="w-videos" v-for="iten in listt" v-if="iten.list.length">
       <div class="g-b-t"></div>
       <div class="g-b-b"></div>
       <div class="w-videos_title-wrap">
@@ -22,7 +22,7 @@
         <a class="w-video" v-for="more in iten.list" :href="'/' + more.no">
           <div class="w-video_thumb">
             <img :src="more.live_thumb">
-            <div class="w-video_view">{{more.view}}</div>
+            <div class="w-video_view">{{(more.view/10000).toFixed(2) + '万'}}</div>
           </div>
           <div class="w-video_foot">
             <div class="w-video_avatar">

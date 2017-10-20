@@ -2,6 +2,10 @@
   <div id="app">
     <child></child>
     <jingx></jingx>
+    <!-- <mt-popup
+      v-model="popupVisible"
+      position="bottom">
+    </mt-popup> -->
     <router-view/>
   </div>
 </template>

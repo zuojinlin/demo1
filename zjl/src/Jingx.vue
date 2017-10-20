@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<div class="w-header_buttons">
-			<router-link to="/a" class="w-header_button " active-class="w-header_button_selected w-header_button_selected" >精选</router-link>
+			<router-link to="/" class="w-header_button " active-class="w-header_button_selected w-header_button_selected" >精选</router-link>
 			<router-link to="/game/all" active-class="w-header_button_selected w-header_button_selected" class="w-header_button" @focus="addc">直播</router-link>
 			<router-link to="/category" active-class="w-header_button_selected w-header_button_selected" class="w-header_button" @focus="addc">分类</router-link>
 		</div>

@@ -36,6 +36,11 @@ module.exports = {
             target: 'http://m.quanmin.tv',
             changeOrigin: true,
             pathRewrite: {'^/json': '/json'}
+        },
+        '/register': {
+            target: 'http://localhost:3000',
+            changeOrigin: true,
+            pathRewrite: {'^/register': '/register'}
         }
     },
     // CSS Sourcemaps off by default because relative paths are "buggy"
